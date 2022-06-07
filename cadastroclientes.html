@@ -26,19 +26,19 @@
         <label for="email">Fone</label>
         <input type="text" id="fone" placeholder="Informe o telefone" />
         <div>
-            <button onclick="salvar()">Salvar</button>
+            <button onclick="salvar(limpar)">Salvar</button>
             <button>Cancelar</button>
         </div>
 
     </div>
     <script>
-        function salvar(){
-            const cliente = {
+        const cliente = {
                 nome: "",
                 email: "",
                 fone: ""
             }
-
+        function salvar(callback){
+            
             cliente.nome = document.getElementById("nome").value
             cliente.email = document.getElementById("email").value
             cliente.fone = document.getElementById("fone").value
@@ -52,7 +52,15 @@
             fetch(" http://localhost:3000/clientes", options)
             .then(data => data.json())
             .then(cli => console.log(cli))
+            callback()
+            
+            
 
+        }
+        function limpar(){
+            document.getElementById("nome").value = ""
+            document.getElementById("email").value = ""
+            document.getElementById("fone").value = ""
         }
     </script>
 </body>
