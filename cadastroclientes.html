@@ -32,16 +32,36 @@
 
     </div>
     <script>
-        const cliente = {
+        
+        function salvar(callback){
+            const cliente = {
                 nome: "",
                 email: "",
                 fone: ""
             }
-        function salvar(callback){
-            
             cliente.nome = document.getElementById("nome").value
             cliente.email = document.getElementById("email").value
             cliente.fone = document.getElementById("fone").value
+
+            if(cliente.nome == ""){
+                alert("insira um nome!")
+                document.getElementById("nome").focus()
+                return
+            }else{
+                cliente.nome = document.getElementById("nome").value
+            }if(cliente.email == ""){
+                alert("insira um email!")
+                document.getElementById("email").focus()
+                return
+            }else{
+                cliente.email = document.getElementById("email").value
+            }if(cliente.fone == ""){
+                alert("insira um telefone!")
+                document.getElementById("fone").focus()
+                return
+            }else{
+                cliente.fone = document.getElementById("fone").value
+            }
 
             const options = {
                 method: 'POST',
