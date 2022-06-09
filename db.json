@@ -7,15 +7,15 @@
       "id": 1
     },
     {
-      "nome": "joão",
-      "email": "joão@mail.com.br",
-      "fone": "456",
+      "nome": "mailis",
+      "email": "mailis@mail.com",
+      "fone": "3387 3467",
       "id": 2
     },
     {
-      "nome": "jose",
-      "email": "jose@gmail.com",
-      "fone": "3387 5697",
+      "nome": "fulano",
+      "email": "fulano@gmail.com",
+      "fone": "6789",
       "id": 3
     }
   ]
